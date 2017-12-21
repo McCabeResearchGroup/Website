@@ -15,7 +15,49 @@
 				margin:0px auto; 
 				display:block;
 			}
-			
+
+			.tab {
+				overflow: hidden;				
+			}
+
+			/* Style the buttons that are used to open the tab content */
+			.tab button {
+				background-color: #202020;
+				display:inline-block;
+				border: none;
+				outline: none;
+				cursor: pointer;
+				padding: 22px 45px;
+				transition: 0.3s;
+				font-size:18px;
+				
+			}
+
+			/* Change background color of buttons on hover */
+			.tab button:hover {
+				background-color: #464545;
+			}
+
+			/* Create an active/current tablink class */
+			.tab button.active {
+				background-color: #7A7A7A;
+			}
+
+			/* Style the tab content */
+			.tabcontent {
+				animation: fadeEffect 1s;
+				display: none;
+				padding: 6px 12px;
+				border: 3px solid #8B8B8B;
+				margin-top:  30px;
+				margin-left: 200px;
+				margin-right:200px;
+			}
+
+			@keyframes fadeEffect {
+			    from {opacity: 0;}
+ 	   			to {opacity: 1;}
+			}
 		</style>
 	</head>
 	<body>
@@ -122,13 +164,69 @@
 		<!-- Our Team -->
 			<section id="team" class="main">
 				<header>
-					<div class="container">
-						<h2 style="margin-bottom:40px;" >Meet the Team</h2>
-						<a href="#form" class="button scrolly">Primary Researchers</a>
-						<a href="#form" class="button scrolly">Graduate Students</a>
-						<a href="#form" class="button scrolly">Undergraduate Students</a>
-					</div>	
-									
+					<h2 style="margin-bottom:40px;font-size:2.4em;" >Meet the Team</h2>
+					<ul class="tab">
+						<div class="tab">
+							<button class="tablinks" onclick="openCity(event, 'TeamMembers')">Our Team</button>
+							<button class="tablinks" onclick="openCity(event, 'PrimaryResearchers')">Primary Researchers</button>
+							<button class="tablinks" onclick="openCity(event, 'GraduateStudents')">Graduate Students</button>
+							<button class="tablinks" onclick="openCity(event, 'Undergraduate Students')">Undergraduate Students</button>
+						</div>
+					</ul>
+					<div id="TeamMembers" class="tabcontent">
+							<h3 style="margin-top:60px;font-size:2.0em;">Our Team</h3>
+							<p style="margin-bottom:70px;text-align:justify;margin-left: auto;margin-right: auto;width: 40em">
+								Whether they've been here for years for a graduate fellowship or months for
+								 a summer internship, we value all of our research team members. 
+								Without them, none of these conferences, papers, or publications would have been possible.
+							</p>
+						</div>
+					
+					  	<div id="PrimaryResearchers" class="tabcontent">
+							<h3 style="margin-top:60px;font-size:2.0em;">Primary Researchers</h3>
+							<div class="row">
+								<div class="img-circle" style="margin-top:-180px;margin-bottom:40px;" ><img class="rounded" style="height:100%;" src="images/mccabe.jpg"  /></div>
+								<div class="img-circle" style="margin-top:-180px;margin-bottom:40px;" ><img class="rounded" style="height:100%;" src="images/mccabe.jpg"  /></div>
+							</div>
+							
+							<p style="margin-bottom:70px;text-align:justify;margin-left: auto;margin-right: auto;width: 40em">
+								London is the capital city of England.</p>
+						</div>
+						
+						<div id="GraduateStudents" class="tabcontent">
+							<h3 style="margin-top:60px;font-size:2.0em;">Graduate Students</h3>
+							<p style="margin-bottom:70px;text-align:justify;margin-left: auto;margin-right: auto;width: 40em">
+								Paris is the capital of France.</p> 
+						</div>
+					  
+						<div id="Undergraduate Students" class="tabcontent">
+							<h3 style="margin-top:60px;font-size:2.0em;">Undergraduate Students</h3>
+							<p style="margin-bottom:70px;text-align:justify;margin-left: auto;margin-right: auto;width: 40em">
+								Tokyo is the capital of Japan.</p>
+						</div>
+					
+					
+					  
+					<script>
+						openCity(event, "TeamMembers")
+						function openCity(evt, cityName) {
+							var i, tabcontent, tablinks;
+							tabcontent = document.getElementsByClassName("tabcontent");
+						  	for (i = 0; i < tabcontent.length; i++) {
+								tabcontent[i].style.display = "none";
+						 	}
+							tablinks = document.getElementsByClassName("tablinks");
+						  	for (i = 0; i < tabcontent.length; i++) {
+								tablinks[i].classList.remove("active");
+						  	}
+						  	document.getElementById(cityName).style.display = "block";
+						  	if (evt) {evt.currentTarget.classList.add("active");}
+					  	}
+					</script>
+					<script>
+						var mybtn = document.getElementsByClassName("tablinks")[0];
+						mybtn.click();
+					</script>		  
 				</header>
 			</section>
 			
