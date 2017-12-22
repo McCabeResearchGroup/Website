@@ -93,6 +93,7 @@
 					from {opacity: 0;}
 					to {opacity: 1;}
 				}
+				
 		</style>
 		<script>
 			function openCity(evt, cityName) {
@@ -133,24 +134,32 @@
 				<header>
 					<div class="container">
 						<h2>About Us</h2>
-						<p style="text-align:justify;margin-left: auto;margin-right: auto;width: 40em">
-							Welcome to the Clare McCabe research group website. Professor McCabe is the Professor in the
-							Department of Chemical Engineering and Chemistry, Associate Dean of the Graduate School, and
-							Director of the Office of Postdoctoral Affairs at Vanderbilt University in Nashville, TN. 
-							McCabe also directs the Multicscale Modeling and Simulation (MuMS) group at Vanderbilt, an 
-							interdisciplinary research facility housing faculty from the School of Engineering, and works
-							in Vanderbilt's Institute for Nanoscale Science and Engineering (VINSE) group. Her research
-							interests include molecular simulation, theoretical chemistry, computational structural
-							biochemistry, chemical biology, and biophysical chemistry.</p>
-						<p style="text-align:justify;margin-left: auto;margin-right: auto;width: 40em">
-							Since joining the Vanderbilt faculty in 2004, McCabe displayed excellence as a mentor and 
-							supervised students in their undergraduate research projects. At a 2011 faculty awards 
-							ceremony, Chancellor Nicholas S. Zeppos presented her with the Madison Sarratt Prize for
-							Excellence in Undergraduate Teaching. McCabe directs a Graduate Assistance in Areas of National
-							Need (GAANN) program at Vanderbilt University in distributing funds from a U.S. Department of 
-							Education grant to fund graduate fellowships in the area of advanced materials. Throughout the
-							years, McCabe has published in notable journals, including the American Chemical Society, 
-							American Physical Society, CRC press, and The Royal Society of Chemistry.</p>
+						<div>
+							<input type="checkbox" class="read-more-state" id="post-1" />
+							<div class="read-more-wrap">
+								<p style="text-align:justify;margin-left: auto;margin-right: auto;width: 40em">
+									Welcome to the Clare McCabe research group website. Professor McCabe is the Professor in the
+									Department of Chemical Engineering and Chemistry, Associate Dean of the Graduate School, and
+									Director of the Office of Postdoctoral Affairs at Vanderbilt University in Nashville, TN. 
+									McCabe also directs the Multicscale Modeling and Simulation (MuMS) group at Vanderbilt, an 
+									interdisciplinary research facility housing faculty from the School of Engineering, and works
+									in Vanderbilt's Institute for Nanoscale Science and Engineering (VINSE) group. Her research
+									interests include molecular simulation, theoretical chemistry, computational structural
+									biochemistry, chemical biology, and biophysical chemistry. ...</p>
+								<span class="read-more-target">
+									<p style="text-align:justify;margin-left: auto;margin-right: auto;width: 40em">
+										Since joining the Vanderbilt faculty in 2004, McCabe displayed excellence as a mentor and 
+										supervised students in their undergraduate research projects. At a 2011 faculty awards 
+										ceremony, Chancellor Nicholas S. Zeppos presented her with the Madison Sarratt Prize for
+										Excellence in Undergraduate Teaching. McCabe directs a Graduate Assistance in Areas of National
+										Need (GAANN) program at Vanderbilt University in distributing funds from a U.S. Department of 
+										Education grant to fund graduate fellowships in the area of advanced materials. Throughout the
+										years, McCabe has published in notable journals, including the American Chemical Society, 
+										American Physical Society, CRC press, and The Royal Society of Chemistry.</p>
+								</span>
+							</div>
+							<label for="post-1" class="read-more-trigger"></label>
+						</div>
 					</div>
 				</header>
 			</section>
@@ -207,7 +216,7 @@
 						<div class="row">
 							<div class="12u">
 								<footer>
-									<a href="#team" class="button scrolly">About Our Team</a>
+									<a href="#team" class="button scrolly" onclick="openCity(event, 'TeamMembers')">About Our Team</a>
 								</footer>
 							</div>
 						</div>
@@ -228,7 +237,8 @@
 						</div>
 					</ul>
 					<div id="TeamMembers" class="tabcontent">
-							<h3 style="margin-top:60px;font-size:2.0em;">Our Team</h3>
+							<p onclick="this.parentElement.style.display='none'" style="text-align:right;margin-right:20px;margin-bottom:-12px">[hide]</p>
+							<h3 style="margin-bottom:60px;font-size:2.0em;">Our Team</h3>
 							<p style="margin-bottom:70px;text-align:justify;margin-left: auto;margin-right: auto;width: 40em">
 								Whether they've been here for several years for a graduate fellowship or a few months for
 								 a summer internship, we value all of our research team members. 
@@ -237,7 +247,8 @@
 						</div>
 					
 					  	<div id="PrimaryResearchers" class="tabcontent">
-							<h3 style="margin-top:60px;margin-bottom:60px;font-size:2.0em;">Primary Researchers</h3>
+							<p onclick="this.parentElement.style.display='none'" style="text-align:right;margin-right:20px;margin-bottom:-12px">[hide]</p>
+							<h3 style="margin-bottom:60px;font-size:2.0em;">Primary Researchers</h3>
 							<table width="100%" border="0" align="center" cellpadding="5" cellspacing="5" style="margin-bottom:60px;">
 									<tr>
 										<td width="33%" align="center" valign="middle"><img src="images/clare_mccabe2.jpg" height="200" alt="Clare McCabe" /></td>
@@ -257,7 +268,8 @@
 						
 
 						<div id="GraduateStudents" class="tabcontent">
-							<h3 style="margin-top:60px;margin-bottom:60px;font-size:2.0em;">Graduate Students</h3>
+							<p onclick="this.parentElement.style.display='none'" style="text-align:right;margin-right:20px;margin-bottom:-12px">[hide]</p>
+							<h3 style="margin-bottom:60px;font-size:2.0em;">Graduate Students</h3>
 							<table width="100%" border="0" cellspacing="5" cellpadding="5" style="margin-bottom:60px;">
 								<tr>
 									<td width="33%" align="center" valign="middle"><img src="images/christoph_klein.jpg" height="200" alt="Christoph Klein" /></td>
@@ -310,7 +322,8 @@
 					  
 
 						<div id="UndergraduateStudents" class="tabcontent">
-							<h3 style="margin-top:60px;margin-bottom:60px;font-size:2.0em;">Undergraduate Students</h3>
+							<p onclick="this.parentElement.style.display='none'" style="text-align:right;margin-right:20px;margin-bottom:-12px">[hide]</p>
+							<h3 style="margin-bottom:60px;font-size:2.0em;">Undergraduate Students</h3>
 							<table width="100%" border="0" align="center" cellpadding="5" cellspacing="5" style="margin-bottom:60px;">
 									<tr>
 										<td width="33%" align="center" valign="middle"><img src="images/davy_yue.jpg" height="200" alt="Davy Yue" /></td>
@@ -339,7 +352,8 @@
 										<td align="center" valign="middle">Open Position </br> Undergraduate Student</td>
 									</tr>
 							</table>
-							<a href="#form" class="button scrolly" style="margin-bottom:60px;margin-left:40px;text-align:justify;margin-left: auto;margin-right: auto;">Learn More about Undergraduate Opportunities</a>							
+							<a href="#form" class="button scrolly" style="margin-bottom:60px;margin-left:40px;text-align:justify;margin-left: auto;margin-right: auto;">Learn More about Undergraduate Opportunities</a>
+														
 						</div>
 					
 					
@@ -348,8 +362,8 @@
 				</header>
 			</section>
 			
-		<!-- Projects -->
-			<section id="Projects" class="main">
+		<!-- Project Gallery -->
+			<section id="ProjectGallery" class="main">
 				<div class="content dark style2">
 					<div class="container">
 						<div class="row">
@@ -365,26 +379,97 @@
 										Modeling and Simulation Institute at Vanderbilt (MUMS) strives to achieve these goals.	
 										Associated articles and pages are linked to the gallery images.</p>
 									<footer>
-										<button class="tablinks" onclick="openCity(event, 'Publications')" style="margin-top:20px;margin-bottom:25px;margin-left:35px;font-size:.97em;">View Publications</button>
+										<button class="tablinks" onclick="openCity(event, 'CurrentProjects')" style="margin-top:15px;margin-bottom:20px;margin-left:19px;font-size:.97em;">Current Projects</button>
+										<button class="tablinks" onclick="openCity(event, 'Publications')" style="margin-bottom:25px;margin-left:15px;font-size:.97em;">View Publications</button>
 									</footer>
 								</section>
 							</div>
 							<div class="8u 12u(narrow)">
 								<div class="row" style="margin-top:50px">
-									<div class="6u"><a href="http://pubs.acs.org/doi/abs/10.1021/acs.langmuir.5b03862" class="image fit"><img src="images/pic01.jpg" height="230" alt="" /></a></div>
-									<div class="6u"><a href="https://github.com/mosdef-hub/mbuild" class="image fit"><img src="images/pic02.png" height="230" alt="" /></a></div>
-									<div class="6u"><a href="https://link.springer.com/chapter/10.1007/978-981-10-1128-3_5" class="image fit"><img src="images/pic03.png" height="200" alt="" /></a></div>
-									<div class="6u"><a href="http://pubs.acs.org/doi/abs/10.1021/acs.langmuir.5b03862" class="image fit"><img src="images/pic04.jpg" height="200" alt="" /></a></div>
+									<div class="6u"><a href="http://pubs.acs.org/doi/abs/10.1021/acs.langmuir.5b03862" target="_blank" class="image fit"><img src="images/pic01.jpg" height="230" alt="" /></a></div>
+									<div class="6u"><a href="https://github.com/mosdef-hub/mbuild" target="_blank" class="image fit"><img src="images/pic02.png" height="230" alt="" /></a></div>
+									<div class="6u"><a href="https://link.springer.com/chapter/10.1007/978-981-10-1128-3_5" target="_blank" class="image fit"><img src="images/pic03.png" height="200" alt="" /></a></div>
+									<div class="6u"><a href="http://pubs.acs.org/doi/abs/10.1021/acs.langmuir.5b03862" target="_blank" class="image fit"><img src="images/pic04.jpg" height="200" alt="" /></a></div>
 								</div>
 							</div>
 						</div>
 
-						<div id="Publications" class="tabcontent" style="margin-left:5px;margin-right:5px">
+						<div id="CurrentProjects" class="tabcontent" style="margin-left:auto;margin-right:auto;width: 60em">
+							<span onclick="this.parentElement.style.display='none'" style="text-align:right">[hide]</span>
+							<h3 style="margin-left:10px;margin-right:10px;margin-top:30px;font-size:2.0em;">Current Projects</h3>
+							<div class="table-wrapper" style="margin-left:10px;margin-right:10px">
+									<table class="default">
+										<p>Click on the titles to view the associated Github repositories or webpages.</p>
+										<thead>
+											<tr>
+												<th style="text-align:center;width:15em;">Title</th>
+												<th>Description</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>
+													<a href="https://github.com/mosdef-hub/mbuild" target="_blank" alt="" />
+													Molecular Modeling of Lipid Self-Assembly </a> 
+												</td>
+												<td>We are interested in understanding how and why skin lipid molecules assemble 
+													into the structures observed through microscopy and biophysical measurements. 
+													We hope to elucidate the role of normal and abnormal lipid composition on lipid 
+													organization and skin barrier function; the resultant conclusions will provide 
+													the molecular basis for breaching the skin barrier in a controlled manner to 
+													facilitate delivery of drugs across the skin and to develop treatment strategies 
+													that restore barrier function in diseased skin.</td>
+											</tr>
+											<tr>
+												<td>
+													<a href="https://github.com/mosdef-hub/foyer" target="_blank" alt="" />
+													Development and Application of Molecular Theories</a> 
+												</td>
+												<td>The ability to accurately predict the thermodynamic properties of fluids is central 
+													to chemical product and process design. Our work focuses on the development and 
+													application of molecular based approaches to determine the thermodynamic properties 
+													and phase behavior of a wide range of fluids such as hydrocarbons, polymers, ionic 
+													liquids and electrolytes. </td>
+											</tr>
+											<tr>
+												<td>
+													<a href="https://engineering.vanderbilt.edu/research/energy.php" target="_blank" alt="" />
+													Improving the Efficiency of BioFuel Conversion</a> 
+												</td>
+												<td>While biofuels remain a very promising component of the solution to meeting 21st-century 
+													energy needs, low efficiencies and high cost limit the potential growth of the energy 
+													source. We focus on developing models and tools to understand the biological 
+													depolymerization of cellulose by cellulases; our ultimate goal is providing molecular 
+													level insight to enable the design of more efficient and active cellulases.</td>
+											</tr>
+											<tr>
+												<td>
+													<a href="https://www.vanderbilt.edu/vinse/" target="_blank" alt="" />
+													Molecular Modeling of Nanoscale Systems</a>
+												</td>
+												<td>Since experimental design in nanoscale systems are often difficult due to the time and 
+													length scales involved, molecular modeling helps overcome these research barriers. In 
+													particular, we are interested in the study of nanoparticles, such as carbon nanotubes 
+													and polyhedral oligomeric silsesquioxanes (or more simply POSS molecules). We use 
+													molecular modeling to understand the properties for nanoparticles and composite materials 
+													are impacted by their chemical structure and composition.</td>
+										</tbody>
+									</table>
+								</div>
+								<p style="text-align:right;margin-right:10px">Last Updated 2017-12-22</p>
+								<a href="#ProjectGallery" class="button scrolly" onclick="this.parentElement.style.display='none';" style="float:right;margin-right:10px">[hide]</a>
+								<p>&nbsp;</p>
+								<p>&nbsp;</p>
+							</div>
+						</div>
+					
+
+						<div id="Publications" class="tabcontent" style="margin-left:auto;margin-right:auto;width: 60em">
 							<span onclick="this.parentElement.style.display='none'" style="text-align:right">[hide]</span>
 							<h3 style="margin-left:10px;margin-right:10px;margin-top:30px;font-size:2.0em;">Google Scholar Publications at MuMS</h3>
 							<div class="table-wrapper" style="margin-left:10px;margin-right:10px">
 									<table class="default">
-										<p>Click on article titles to read them.</p>
+										<p>Click on paper titles to view the journal website.</p>
 										<thead>
 											<tr>
 												<th>Year</th>
@@ -512,7 +597,7 @@
 									</table>
 								</div>
 								<p style="text-align:right;margin-right:10px">Last Updated 2017-12-21</p>
-								<a href="#Projects" class="button scrolly" onclick="this.parentElement.style.display='none';" style="float:right;margin-right:10px">[hide]</a>
+								<a href="#ProjectGallery" class="button scrolly" onclick="this.parentElement.style.display='none';" style="float:right;margin-right:10px">[hide]</a>
 								<p>&nbsp;</p>
 								<p>&nbsp;</p>
 							</div>
