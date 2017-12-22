@@ -1,0 +1,11 @@
+Good afternoon,
+
+Happy Holidays! In the spirit of gift giving, I would like to give back to the research lab that gave me excellent mentoring in multiscale molecular simulations and python programming. With a day and a half of free time over winter break, I have designed a new responsive, dynamic website for the McCabe Research Group at (link) to upgrade the 2012 version(link).
+
+Please let me know if you would like any features or content to be added or removed from the website. In the next week or so, I can transfer the domain url to (link), so other sites can refer to the updated design and hopefully greater exposure to MuMs will occur.
+
+I hope you all have an enjoyable holiday weekend.
+
+Best,
+
+Davy Yue
