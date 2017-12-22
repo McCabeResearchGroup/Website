@@ -6,61 +6,95 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<style>
-			.img-circle {
-				width: 200px; 
-				height: 200px;
-				position: relative;
-				overflow: hidden;
-				border-radius: 50%;
-				margin:0px auto; 
-				display:block;
-			}
+			/* Top of Page - McCabe Photo */
+				.img-circle {
+					width: 200px; 
+					height: 200px;
+					position: relative;
+					overflow: hidden;
+					border-radius: 50%;
+					margin:0px auto; 
+					display:block;
+				}
+			
+			/* Read More for About Us section*/
+				.read-more-state {
+					display: none;
+				}
 
-			.tab {
-				overflow: hidden;				
-			}
+				.read-more-target {
+					opacity: 0;
+					max-height: 0;
+					font-size: 0;
+					transition: .25s ease;
+				}
 
-			/* Style the buttons that are used to open the tab content */
-			.tab button {
-				background-color: #202020;
-				display:inline-block;
-				border: none;
-				outline: none;
-				cursor: pointer;
-				padding: 22px 45px;
-				transition: 0.3s;
-				font-size:18px;
-				
-			}
+				.read-more-state:checked ~ .read-more-wrap .read-more-target {
+					opacity: 1;
+					font-size: inherit;
+					max-height: 999em;
+				}
 
-			/* Change background color of buttons on hover */
-			.tab button:hover {
-				background-color: #464545;
-			}
+				.read-more-state ~ .read-more-trigger:before {
+					content: 'Show more';
+				}
 
-			/* Create an active/current tablink class */
-			.tab button.active {
-				background-color: #7A7A7A;
-			}
+				.read-more-state:checked ~ .read-more-trigger:before {
+					content: 'Show less';
+				}
 
-			/* Style the tab content */
-			.tabcontent {
-				animation: fadeEffect 1s;
-				display: none;
-				padding: 6px 12px;
-				border: 3px solid #8B8B8B;
-				margin-top:  30px;
-				margin-left: 200px;
-				margin-right:200px;
-			}
+				.read-more-trigger {
+					cursor: pointer;
+					display: inline-block;
+					padding: 0 .5em;
+					color: #666;
+					font-size: .9em;
+					line-height: 2;
+					border: 1px solid #ddd;
+					border-radius: .25em;
+				}
+			
+			/* Tabs sections */
+				.tab {
+					overflow: hidden;				
+				}
 
-			@keyframes fadeEffect {
-			    from {opacity: 0;}
- 	   			to {opacity: 1;}
-			}
+				.tab button {
+					background-color: #202020;
+					display:inline-block;
+					border: none;
+					outline: none;
+					cursor: pointer;
+					padding: 22px 45px;
+					transition: 0.3s;
+					font-size:18px;
+					
+				}
+
+				.tab button:hover {
+					background-color: #464545;
+				}
+
+				.tab button.active {
+					background-color: #7A7A7A;
+				}
+
+				.tabcontent {
+					animation: fadeEffect 1s;
+					display: none;
+					padding: 6px 12px;
+					border: 3px solid #8B8B8B;
+					margin-top:  30px;
+					margin-left: 200px;
+					margin-right:200px;
+				}
+
+				@keyframes fadeEffect {
+					from {opacity: 0;}
+					to {opacity: 1;}
+				}
 		</style>
 		<script>
-			openCity(event, "TeamMembers")
 			function openCity(evt, cityName) {
 				var i, tabcontent, tablinks;
 				tabcontent = document.getElementsByClassName("tabcontent");
