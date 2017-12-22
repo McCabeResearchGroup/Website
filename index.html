@@ -109,11 +109,8 @@
 				document.getElementById(cityName).style.display = "block";
 				if (evt) {evt.currentTarget.classList.add("active");}
 			}
+
 		</script>
-		<script>
-			var mybtn = document.getElementsByClassName("tablinks")[0];
-			mybtn.click();
-		</script>		
 	</head>
 	<body>
 
@@ -250,19 +247,19 @@
 							<p onclick="this.parentElement.style.display='none'" style="text-align:right;margin-right:20px;margin-bottom:-12px">[hide]</p>
 							<h3 style="margin-bottom:60px;font-size:2.0em;">Primary Researchers</h3>
 							<table width="100%" border="0" align="center" cellpadding="5" cellspacing="5" style="margin-bottom:60px;">
-									<tr>
-										<td width="33%" align="center" valign="middle"><img src="images/clare_mccabe2.jpg" height="200" alt="Clare McCabe" /></td>
-										<td width="33%" align="center" valign="middle"><img src="images/peter_cummings.jpg" height="200" alt="Peter Cummings" /></td>
-										<td width="33%" align="center" valign="middle"><img src="images/chris_iacovella.jpg" height="200" alt="Chris Iacovella" /></td>
-									</tr>
-									<tr>
-										<td align="center" valign="middle"><a href="mailto:c.mccabe@vanderbilt.edu" target="_blank">Clare McCabe</a><br />
-											Research Professor</td>
-										<td align="center" valign="middle"><a href="mailto:peter.cummings@vanderbilt.edu" target="_blank">Peter Cummings</a><br />
-											Research Professor</td>
-										<td align="center" valign="middle"><a href="mailto:christopher.r.iacovella@vanderbilt.edu" target="_blank">Chris Iacovella</a><br />
-											Research Assistant Professor</td>
-									</tr>
+								<tr>
+									<td width="33%" align="center" valign="middle"><img src="images/clare_mccabe2.jpg" height="200" alt="Clare McCabe" /></td>
+									<td width="33%" align="center" valign="middle"><img src="images/peter_cummings.jpg" height="200" alt="Peter Cummings" /></td>
+									<td width="33%" align="center" valign="middle"><img src="images/chris_iacovella.jpg" height="200" alt="Chris Iacovella" /></td>
+								</tr>
+								<tr>
+									<td align="center" valign="middle"><a href="mailto:c.mccabe@vanderbilt.edu" target="_blank">Clare McCabe</a><br />
+										Research Professor</td>
+									<td align="center" valign="middle"><a href="mailto:peter.cummings@vanderbilt.edu" target="_blank">Peter Cummings</a><br />
+										Research Professor</td>
+									<td align="center" valign="middle"><a href="mailto:christopher.r.iacovella@vanderbilt.edu" target="_blank">Chris Iacovella</a><br />
+										Research Assistant Professor</td>
+								</tr>
 							</table>
 						</div>
 						
@@ -621,25 +618,25 @@
 				<!-- https://script.google.com/macros/u/1/s/AKfycbxoOcV5qB9eZQiSCsWAYT9dOs5X7_0PN6ufDp4siPS-mPOO2tpO/exec -->
 				<div class="content style4 featured">
 					<div class="container 75%">
-						<form method="post" action="#">
+						<form method="GET" action="mailto:davy.yue@vanderbilt.edu" enctype="text/plain">
 							<div class="row 50%">
 								<div class="6u 12u(narrow)">
-									<input type="text" name="First_Name" id="firstname" value="" placeholder="First name" />
+									<input type="text" name="First_Name" id="First_Name" value="" placeholder="First name" />
 								</div>
 								<div class="6u 12u(narrow)">
-									<input type="text" name="Last_Name" id="lastname" value="" placeholder="Last name" />
+									<input type="text" name="Last_Name" id="Last_Name" value="" placeholder="Last name" />
 								</div>
 								<div class="6u 12u(narrow)">
-									<input type="text" name="VUnetID" id="vunetid" value="" placeholder="VUNet ID (N/A if not applicable)" />
+									<input type="text" name="VUnetID" id="VUnetID" value="" placeholder="VUNet ID (N/A if not applicable)" />
 								</div>
 								<div class="6u 12u(narrow)">
-									<input type="text" name="Email" id="email" value="" placeholder="first.last@vanderbilt.edu" />
+									<input type="text" name="Email" id="Email" value="" placeholder="first.last@vanderbilt.edu" />
 								</div>
 							</div>
 							<div class="row 50%">
 								<div class="12u">
 									<div class="select" tabindex="-1">
-										<select name="Topic" id="topic">
+										<select name="Topic" id="Topic">
 											<option value="">Choose a Topic</option>
 											<option value="1">Application for graduate student research position</option>
 											<option value="2">Application for undergraduate student research position</option>
@@ -652,12 +649,12 @@
 							</div>
 							<div class="row 50%">
 								<div class="12u">
-									<input type="text" name="Subject" id="subject" value="" placeholder="Enter your subject" />
+									<input type="text" name="Subject" id="Subject" value="" placeholder="Enter your subject" />
 								</div>
 							</div>
 							<div class="row 50%">
 								<div class="12u">
-									<textarea name="Message" id="message" placeholder="Enter your message"></textarea>
+									<textarea name="Message" id="Message" placeholder="Enter your message"></textarea>
 								</div>
 							</div>
 								<div class="row">
@@ -668,20 +665,7 @@
 										</ul>
 									</div>
 									<script>
-										var $form = $('form#test-form'),
-											url = 'https://script.google.com/macros/u/1/s/AKfycbxoOcV5qB9eZQiSCsWAYT9dOs5X7_0PN6ufDp4siPS-mPOO2tpO/exec'
-
-										$('#submit-form').on('click', function(e) {
-										e.preventDefault();
-										var jqxhr = $.ajax({
-											url: url,
-											method: "GET",
-											dataType: "json",
-											data: $form.serializeObject()
-										}).success(
-											// do something
-										);
-										})
+										
 									</script>
 								</div>
 							</div>
@@ -693,12 +677,15 @@
 		<!-- Footer -->
 			<section id="footer">
 				<ul class="icons">
-					<li><a href="https://my.vanderbilt.edu/mums/" class="icon fa-university"><span class="label">Vanderbilt University</span></a></li>
-					<li><a href="https://github.com/mosdef-hub" class="icon fa-github"><span class="label">GitHub</span></a></li>
+					<li><a href="https://my.vanderbilt.edu/mums/" target="_blank" class="icon fa-university"><span class="label">Vanderbilt University</span></a></li>
+					<li><a href="https://github.com/mosdef-hub" target="_blank" class="icon fa-github"><span class="label">GitHub</span></a></li>
+					<p style="margin-top:10px;font-size:.8em;text-align:center">
+							Multiscale Modeling & Simulation Office </br>
+							1102 17th Ave South, Suite 200, Nashville, TN 37212</p>
 				</ul>
 				<div class="copyright">
 					<ul class="menu">
-						<li>&copy; McCabe Research Group 2017. All rights reserved.</li><li>Design: <a href="http://davyyue.com">Davy Yue</a></li>
+						<li>&copy; McCabe Research Group 2017. All rights reserved.</li><li>Design: <a href="https://davyyue.com" target="_blank">Davy Yue</a></li>
 					</ul>
 				</div>
 			</section>
