@@ -617,6 +617,8 @@
 							Fill out the form below!</p>
 					</div>
 				</header>
+
+				<!-- https://script.google.com/macros/u/1/s/AKfycbxoOcV5qB9eZQiSCsWAYT9dOs5X7_0PN6ufDp4siPS-mPOO2tpO/exec -->
 				<div class="content style4 featured">
 					<div class="container 75%">
 						<form method="post" action="#">
@@ -661,10 +663,26 @@
 								<div class="row">
 									<div class="12u">
 										<ul class="actions">
-											<li><input type="submit" class="button" value="Send Message" /></li>
+											<li><input type="submit" class="button" id="submit-form" value="Send Message" /></li>
 											<li><input type="reset" class="button alt" value="Clear Form" /></li>
 										</ul>
 									</div>
+									<script>
+										var $form = $('form#test-form'),
+											url = 'https://script.google.com/macros/u/1/s/AKfycbxoOcV5qB9eZQiSCsWAYT9dOs5X7_0PN6ufDp4siPS-mPOO2tpO/exec'
+
+										$('#submit-form').on('click', function(e) {
+										e.preventDefault();
+										var jqxhr = $.ajax({
+											url: url,
+											method: "GET",
+											dataType: "json",
+											data: $form.serializeObject()
+										}).success(
+											// do something
+										);
+										})
+									</script>
 								</div>
 							</div>
 						</form>
